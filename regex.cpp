@@ -144,19 +144,50 @@ void insertTransition() {
     }
 }
 
-
-int main()
-{
-    // Input the States
-    cout << "Enter the states in the DFA:\n";
-    while (true)
-    {
+int main() {
+    cout << "Enter the states in the DFA (type -1 to stop):\n";
+    while (true) {
         string s;
-        cout << "State: ";
         cin >> s;
+        if (s == "-1") break;
         st.push_back(s);
-        char choice;
-        cout << "Continue adding states (y/n)? ";
-        cin >> choice;
-        if (choice != 'y') break;
     }
+
+    cout << "\nEnter the Start State: ";
+    cin >> startSt;
+
+    cout << "\nEnter the Final States (type -1 to stop):\n";
+    while (true) {
+        string f;
+        cin >> f;
+        if (f == "-1") break;
+        finalSt.push_back(f);
+    }
+
+    cout << "\nEnter the transition symbols (type -1 to stop):\n";
+    while (true) {
+        string sym;
+        cin >> sym;
+        if (sym == "-1") break;
+        symbols.push_back(sym);
+    }
+
+    insertTransition();
+
+    cout << "\n----------------------------------------\n";
+    cout << "         TRANSITION TABLE               \n";
+    cout << "----------------------------------------\n";
+    cout << "STATE\t| SYMBOL\t| NEXT STATE\n";
+    cout << "----------------------------------------\n";
+    for (const auto &t : transition) {
+        cout << get<0>(t) << "\t| " << get<1>(t) << "\t| " << get<2>(t) << endl;
+    }
+
+    string regexval = regexForm();
+
+    cout << "\n----------------------------------------\n";
+    cout << "The Regular Expression is: " << regexval << endl;
+    cout << "----------------------------------------\n";
+    return 0;
+}
+
