@@ -1,4 +1,5 @@
-# 🎯 DFA to Regular Expression Converter
+#  DFA to Regular Expression Converter
+---
 
 This C++ project converts a **Deterministic Finite Automaton (DFA)** into its equivalent **Regular Expression (Regex)** using the **state elimination method**.
 
@@ -71,11 +72,15 @@ Epsilon (ε) transitions are represented as "E" internally.
 Redundant outer parentheses are removed for cleaner output.
 
 # 🧳 Future Improvements
-GUI support for DFA input
+i. GUI support for DFA input
 
-Visual representation of transitions
+ii. Visual representation of transitions
 
-Support for NFA and Epsilon-NFA to Regex conversion
+iii. Support for NFA and Epsilon-NFA to Regex conversion
 
-📄 License
+# 👨‍💻 Author
+cgcb-01
+🔗 https://github.com/cgcb-01
+
+# 📄 License
 This project is licensed under the MIT License.
