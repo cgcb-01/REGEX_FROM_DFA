@@ -20,6 +20,28 @@ void startFinal()
     transition.push_back(make_tuple(finalSt[i],"ε","Final0"));//Final state
 }
 
+//merging same transitions
+void merging() 
+{
+for (size_t i = 0; i < transition.size(); ++i) 
+{
+ for (size_t j = i + 1; j < transition.size();j++)
+    {
+     if (get<0>(transition[i]) == get<0>(transition[j]) && get<2>(transition[i]) == get<2>(transition[j])) 
+       {
+        // Merge the symbols with union (U)
+        string mergedSymbol = "(" + get<1>(transition[i]) + "U" + get<1>(transition[j]) + ")";
+                
+        // Update the transition[i]'s symbol
+        transition[i] = make_tuple(get<0>(transition[i]), mergedSymbol, get<2>(transition[i]));
+
+        // Erase the j-th transition
+        transition.erase(transition.begin() + j);
+       }
+    }
+ }
+}
+
 //Finding the regular expression
 string regexForm()
 {
