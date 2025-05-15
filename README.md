@@ -1,4 +1,11 @@
 #  DFA to Regular Expression Converter
+
+![States: DFA](https://img.shields.io/badge/States-yellow?style=flat-square&logo=appveyor&logoColor=black)
+![Symbols: Input](https://img.shields.io/badge/Symbols-blue?style=flat-square&logo=typescript&logoColor=white)
+![Conversion: DFA→Regex](https://img.shields.io/badge/Conversion-yellow?style=flat-square&logo=regex&logoColor=black)
+![Language: C++](https://img.shields.io/badge/Language-C++-blue?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Platform: CLI](https://img.shields.io/badge/Platform-CLI-yellow?style=flat-square&logo=gnu-bash&logoColor=black)
+
 ---
 
 This C++ project converts a **Deterministic Finite Automaton (DFA)** into its equivalent **Regular Expression (Regex)** using the **state elimination method**.
